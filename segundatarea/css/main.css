@@ -6,7 +6,6 @@
 
 }
 
-}
 
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -21,6 +20,11 @@ h1 {
 	margin:auto;
 }
 
+header {
+	width:100%;
+	height: 150px;
+}
+
 header h1,
 header h3
  {
@@ -28,26 +32,380 @@ header h3
 	letter-spacing: 10px;
 	color:#545454;
 }
+ 
+ nav {
+ 	width:100%;
+  }
+
+.rs {
+	width:50%;
+	float:left;
+	text-align: left;
+}
+
+.pages {
+	width:50%;
+	float:right;
+	text-align: right;
+}
 
 
-.redes ul li {
+.rs ul li {
 	list-style: none;
 	display: inline-block;
-	float:left;
 	padding-left: 1.5em;
 }
 
 .pages ul li {
 	list-style: none;
 	display: inline-block;
-	float:right;
 	padding-right: 1.5em;
 }
 
+#slider {
+	width:100%;
+	height:950px;
+	position:relative;
+}
+
+
+#slider ul li {
+	list-style: none;
+}
+
+
+
+#slider .slide {
+	width:100%;
+	position:absolute;
+}
+
+.caption {
+	width:100%;
+	height:300px;
+	bottom:0;
+	left:0;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	z-index: 20;
+}
+
+.ventana {
+	width:30%;
+	height:300px;
+	top: 200px;
+	left:35%;
+	right:35%;;
+	position: absolute;
+	z-index: 30;
+	background: rgba(234,234,234,0.8);
+	text-align: center;
+	padding:100px;
+}
+
+
+#content li {
+	width:100%;
+	height:950px;
+	position:absolute;
+	display:none;
+}
+
+#content li.active{
+	display: block;
+}
+
+#content li img{
+	width: 100%;
+}
+
+#contenido {
+	width: 100%;
+	padding-top: 50px;
+}
+
+.info {
+		width: 80%;
+		float: left;
+		border: 0.1px solid #cccccc;
+		padding: 2px;
+}
+
+aside {
+		width: 20%;
+		float: right;
+		padding: 0 1em 0 1em;
+}
+
+
+.post {
+	width: 100%;
+}
+
+.post-info {
+	width: 80%;
+	margin:auto;
+	text-align: center;
+	padding: 60px 0px 20px 0px;
+}
+
+.legend {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+
+.redes {
+	width: 100%;
+	height:25px;
+	color: #cccccc;
+	border-top: 0.1px solid #cccccc;
+	border-bottom:0.1px solid #cccccc;
+	margin: 10px 0 10px 0;
+}
+
+.redes-l {
+	float:left;
+}
+
+.redes-r {
+	float:right;
+}
+
+.redes-l ul li {
+	list-style: none;
+	display: inline-block;
+	padding-left: 1.5em;
+}
+
+.redes-r ul li{
+	list-style: none;
+	display: inline-block;
+	padding-right: 1.5em;
+}
+
+
+iframe {
+	width: 100%;
+	height:500px;
+}
+
+#imagenes {
+	width: 100%;
+	height:700px;
+}
+
+#imagenes-r {
+	width: 38%;
+	float:left;
+}
+#imagenes-l {
+	width: 62%;
+	height:666px;
+	float:right;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.img-l {
+	width:50%;
+	float:left;
+	padding: 0px
+}
+
+.posta {
+	float:right;
+	margin-right: 1em;
+}
+
+/*aside*/
+
+.search {
+	width:90%;
+}
+
+.quien-soy {
+	text-align: center;
+}
+
+.quien-soy h3 {
+	padding-top: 1em;
+}
+
+.quien-soy img {
+	width:100%;
+	padding-top: 1em;
+}
+
+.redesconpin ul li {
+	list-style: none;
+	display: inline-block;
+	color:#cccccc;
+	padding: 0.9em;
+}
+ 
+/*categoria*/
+
+ .cates h3 {
+ 	text-align: center;
+ 	padding-top: 1em;
+ 	padding-bottom: 1em;
+ }
+ 
+.categorias {
+	padding-bottom: 0.5em;
+	border-bottom:0.1px solid #cccccc;
+}
+
+ .categorias i,
+ .categorias h4
+  {
+ 	display:inline-block;
+ 	padding-left: 1em;
+  }
+
+ .categorias span {
+ 	float:right;
+ }
+
+/*popular*/
+
+.popular {
+		border-bottom:0.1px solid #cccccc;
+}
+
+
+.popular h3 {
+	text-align: center;
+	padding-top: 1em;
+ 	padding-bottom: 1em;
+ }
+
+.populares {
+	width:100%;
+	height:100px;
+	padding-bottom: 1em;
+}
+
+.img-p {
+	width:30%;
+	float:left;
+}
+
+.detail {
+	width:70%;
+	float:right;
+	bottom: 0px;
+}
+
+
+.detail h3 {
+	text-align: left;
+}
+
+
+.tell {
+	width: 50%;
+	float:left;
+	bottom: 0;
+}
+
+.like {
+	width: 50%;
+	float:right;
+	bottom:0;
+}
+
+/*Instagram*/
+
+.instagram {
+	width: 100%;
+}
+
+.instagram h3 {
+	text-align:center;
+	padding-top: 1em;
+ 	padding-bottom: 1em;
+}
+
+#collage {
+	width:100%;
+}
+
+.insta img {
+	width:33%;
+	height:80px;
+	float:left;
+}
+
+/*Tags*/
+
+.tags h3 {
+	text-align: center;
+	padding-top: 1em;
+ 	padding-bottom: 1em;
+ }
+
+ a {
+ 	text-decoration: none;
+ 	color: #cccccc;
+ 	border:0.1px solid #c6c6c6;
+ 	padding: 0px 20px 0 20px;
+ }
+
+.button {
+	font-size: 1em;
+	padding: 5px;
+	margin-top: 10px;
+	box-shadow: 5px 2px 2px #000;
+}
+
+
+@media screen and (max-width: 990px) {
+
+	header nav {
+		width:100%;
+		height:140px;
+		background: black;
+		color:white;
+	}
+
+	.rs {
+		display:none;
+	}
+
+	.pages {
+		width:100%;
+		text-align: left;
+	}
+
+	.pages ul li {
+		display: block;
+		border-bottom:0.1px solid #fff;
+	}
+
+}
+
+@media screen and (max-width: 990px) {
+
+	#slider {
+		display: none;
+	}
+
+	
+
+}
+
+
+
+
+
+
+/*
 @media screen and (max-width: 500px) {
 	body {
 		background: red;
 	}
 
-}
+}*/
 

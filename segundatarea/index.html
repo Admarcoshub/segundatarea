@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Trabajo 1</title>
+		<script src="./js/scripts.js"></script>
+		<script src="./js/jquery-3.0.0.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,700italic" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300">
@@ -19,7 +22,7 @@
 				<h1>DRAMA</h1>
 				<h3>TU BLOG PERSONAL</h3>
 				<nav>
-					<div class="redes">
+					<div class="rs">
 						<ul>
 							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
 							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
@@ -45,54 +48,61 @@
 
 			<section id="slider">
 
-				<figure>
-					<img src="./img/banner1.jpg">
-					<img src="./img/banner2.jpg">
-				</figure>
+				<ul id="content">
+					<li class="active" data-id="0"><img class="slide" src="./img/banner1.jpg"></li>
+					<li data-id="0"><img class="slide" src="./img/banner2.jpg"></li>
+				</ul>
 
-				<div class="window">
-					<p>#VIAJES</p>
-					<h2>HABIA UNA VEZ</h2>
-					<p>JAN 23,2016</p>
-					<input type="button" value="LEER MAS">
+				<div class= "caption"></div>
+				
+				<div class="ventana">					
+						<p>#VIAJES</p>
+						<h2>HABIA UNA VEZ</h2>
+						<p>JAN 23,2016</p>
+						<input type="button" value="LEER MAS" class="button">
 				</div>
 
 			</section>
 
-			<section id="content">
+			<section id="contenido">
 
 				<div class="info">
-					<img src="./img/blog-img-1.jpg">
-					<i class="fa fa-picture-o" aria-hidden="true"></i>
-					<h4>#VIAJES</h4>
-					<h2>POST STANDAR</h2>
-						<div class="legend">
-							<p class="legendp"><i class="fa fa-user" aria-hidden="true"></i></p>
-							<p class="legendp">SIMÓN GOMES</p>
-							<p class="legendp"><i class="fa fa-calendar-o" aria-hidden="true"></i></p>
-							<p class="legendp">JAN 12, 2016</p>
-						</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
-					<input type="button" value="LEER MAS">
+					<img class="post" src="./img/blog-img-1.jpg">
+					<div class="post-info">
+						<i class="fa fa-picture-o" aria-hidden="true"></i>
+						<h4>#VIAJES</h4>
+						<h2>POST STANDAR</h2>
+							<div class="legend">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								SIMÓN GOMES
+								<i class="fa fa-calendar-o" aria-hidden="true"></i>
+								JAN 12, 2016
+							</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
+						<input type="button" value="LEER MAS" class="button">
+				</div>
+				
 					
 					<div class="redes">
-						<ul>
-							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-							<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
-							<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-							<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-							<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
-						</ul>
-					</div>
+						<div class="redes-l">
+							<ul>
+								<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+								<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
+								<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+								<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+								<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+							</ul>
+						</div>
 
-					<div class="redes">
-						<ul>
-							<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
-							<li>ME GUSTA</li>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>COMENTARIOS</li>
-						</ul>
+						<div class="redes-r">
+							<ul>
+								<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
+								<li>ME GUSTA</li>
+								<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+								<li>COMENTARIOS</li>
+							</ul>
+						</div>
 					</div>
 
 					<div class="video">
@@ -100,280 +110,350 @@
 						<p><a href="https://vimeo.com/21847477">MOTORCYCLE</a> from <a href="https://vimeo.com/user5298680">Drea Cooper</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 					</div>
 
-					<i class="fa fa-video-camera" aria-hidden="true"></i>
-					
-					<div id="videol">
+					<div class="post-info">
+						<i class="fa fa-video-camera" aria-hidden="true"></i>
 						<h4>#VIDEO</h4> 
 						<h4>#ESTILODEVIDA</h4>
-					</div>
-					<h2>COSAS QUE PODRÍAS APRENDER MANEJANDO MOTOCICLETA</h2>
-						<div class="legend">
-							<p class="legendp"><i class="fa fa-user" aria-hidden="true"></i></p>
-							<p class="legendp">SIMÓN GOMES</p>
-							<p class="legendp"><i class="fa fa-calendar-o" aria-hidden="true"></i></p>
-							<p class="legendp">JAN 12, 2016</p>
-						</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
-					<input type="button" value="LEER MAS">
 					
-					<div class="redes">
-						<ul>
-							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-							<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
-							<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-							<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-							<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
-						</ul>
+						<h2>COSAS QUE PODRÍAS APRENDER MANEJANDO MOTOCICLETA</h2>
+							<div class="legend">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								SIMÓN GOMES
+								<i class="fa fa-calendar-o" aria-hidden="true"></i>
+								JAN 12, 2016							</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
+						<input type="button" value="LEER MAS" class="button">
 					</div>
 
-					<div class="redes">
-						<ul>
-							<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
-							<li>ME GUSTA</li>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>COMENTARIOS</li>
-						</ul>
-					</div>
-
-					<i class="fa fa-briefcase" aria-hidden="true"></i>
-
-					<div id="viajes">
-						<h4>#VIAJES</h4> 
-						<h4>#ESTILODEVIDA</h4>
-					</div>
-
-					<h2>SOÑAR NO TIENE QUE SER DIFÍCIL</h2>
-						<div class="legend">
-							<p class="legendp"><i class="fa fa-user" aria-hidden="true"></i></p>
-							<p class="legendp">SIMÓN GOMES</p>
-							<p class="legendp"><i class="fa fa-calendar-o" aria-hidden="true"></i></p>
-							<p class="legendp">JAN 12, 2016</p>
+				<div class="redes">
+						<div class="redes-l">
+							<ul>
+								<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+								<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
+								<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+								<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+								<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+							</ul>
 						</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
-					<input type="button" value="LEER MAS">
 
-					<div class="redes">
-						<ul>
-							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-							<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
-							<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-							<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-							<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
-						</ul>
+						<div class="redes-r">
+							<ul>
+								<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
+								<li>ME GUSTA</li>
+								<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+								<li>COMENTARIOS</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="post-info">	
+						<i class="fa fa-briefcase" aria-hidden="true"></i>
+						<div id="viajes">
+							<h4>#VIAJES</h4> 
+							<h4>#ESTILODEVIDA</h4>
+						</div>
+
+						<h2>SOÑAR NO TIENE QUE SER DIFÍCIL</h2>
+							<div class="legend">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								SIMÓN GOMES
+								<i class="fa fa-calendar-o" aria-hidden="true"></i>
+								JAN 12, 2016
+							</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
+						<input type="button" value="LEER MAS" class="button">
 					</div>
 
 					<div class="redes">
-						<ul>
-							<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
-							<li>ME GUSTA</li>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>COMENTARIOS</li>
-						</ul>
+						<div class="redes-l">
+							<ul>
+								<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+								<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
+								<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+								<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+								<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+
+						<div class="redes-r">
+							<ul>
+								<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
+								<li>ME GUSTA</li>
+								<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+								<li>COMENTARIOS</li>
+							</ul>
+						</div>
 					</div>
 
 					<section id="imagenes">
-						<div id="img1">
-							<img src="./img/gallery-img-double1.jpg">
-						</div>
-						<div id="img2">
-							<img src="./img/gallery-img-single1.jpg">
-						</div>
-						<div id="img3">
-							<img src="./img/gallery-img-single2.jpg">
-						</div>
-						<div id="img4">
-							<img src="./img/gallery-img-single3.jpg">
-						</div>
-						<div id="img5">
-							<img src="./img/gallery-img-single4.jpg">
-						</div>
+							<div id="imagenes-r">
+								<img src="./img/gallery-img-double1.jpg">
+							</div>
+							<div id="imagenes-l">
+								<div class="img-l" id="img2">
+									<img src="./img/gallery-img-single1.jpg">
+								</div>
+								<div class="img-l" id="img3">
+									<img src="./img/gallery-img-single2.jpg">
+								</div>
+								<div class="img-l" id="img4">
+									<img src="./img/gallery-img-single3.jpg">
+								</div>
+								<div class="img-l" id="img5">
+									<img src="./img/gallery-img-single4.jpg">
+								</div>
+							</div>
+
 					</section>
 
-					<i class="fa fa-camera" aria-hidden="true"></i>
-
-					<div id="viajes">
-						<h4>#FOTO</h4> 
-						<h4>#MEMORIA</h4>
-					</div>
-
-					<h2>ME ENCANTAN LOS RECUERDOS</h2>
-						<div class="legend">
-							<p class="legendp"><i class="fa fa-user" aria-hidden="true"></i></p>
-							<p class="legendp">SIMÓN GOMES</p>
-							<p class="legendp"><i class="fa fa-calendar-o" aria-hidden="true"></i></p>
-							<p class="legendp">JAN 12, 2016</p>
+					<div class="post-info">	
+						<i class="fa fa-camera" aria-hidden="true"></i>
+						<div id="viajes">
+							<h4>#FOTO</h4> 
+							<h4>#MEMORIA</h4>
 						</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
-					<input type="button" value="LEER MAS">
 
-					<div class="redes">
-						<ul>
-							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-							<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
-							<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-							<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-							<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
-						</ul>
+						<h2>ME ENCANTAN LOS RECUERDOS</h2>
+							<div class="legend">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								SIMÓN GOMES
+								<i class="fa fa-calendar-o" aria-hidden="true"></i>
+								JAN 12, 2016
+							</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. Cras at purus ac nulla placerat ultricies et eget diam. </p>
+						<input type="button" value="LEER MAS" class="button">
 					</div>
 
 					<div class="redes">
-						<ul>
-							<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
-							<li>ME GUSTA</li>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>COMENTARIOS</li>
-						</ul>
+						<div class="redes-l">
+							<ul>
+								<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+								<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
+								<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+								<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+								<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+
+						<div class="redes-r">
+							<ul>
+								<li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
+								<li>ME GUSTA</li>
+								<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+								<li>COMENTARIOS</li>
+							</ul>
+						</div>
 					</div>
 
+					<div class="post-info">	
 						<div class="legend">
-							<p class="legendp"><i class="fa fa-user" aria-hidden="true"></i></p>
-							<p class="legendp">SIMÓN GOMES</p>
-							<p class="legendp"><i class="fa fa-calendar-o" aria-hidden="true"></i></p>
-							<p class="legendp">JAN 12, 2016</p>
+							<i class="fa fa-user" aria-hidden="true"></i>
+							SIMÓN GOMES
+							<i class="fa fa-calendar-o" aria-hidden="true"></i>
+							JAN 12, 2016
 						</div>
-					<P>Fusce consectetur felis non ultrices dignissim. Ut ac dui finibus, suscipit dui sit amet, mollis diam. Nulla iaculis neque sit amet nunc tempor, non imperdiet quam maximus. Morbi facilisis magna ut orci venenatis imperdiet. </P>
+						<P>Fusce consectetur felis non ultrices dignissim. Ut ac dui finibus, suscipit dui sit amet, mollis diam. Nulla iaculis neque sit amet nunc tempor, non imperdiet quam maximus. Morbi facilisis magna ut orci venenatis imperdiet. </P>
+					</div>
 
-					<input type="button" value="POST ANTIGUOS">
+					<input type="button" value="POST ANTIGUOS" class="posta" class="button">
 				</div>
 
 				<aside>
 
 					<form method="get" action="https://www.google.com/search">
-						<input type="search" name="q" size="31" maxlength="255" placeholder="BUSCAR" />
+						<input type="search" name="q"  placeholder="BUSCAR" class="search">
 						<i class="fa fa-search" aria-hidden="true"></i>
 					</form>
 
-					<h3>QUIEN SOY</h3>
-					<img src="./img/gallery-img-single1.jpg">
-					<p>Dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. </p>
-
-					<div class="redes">
-						<ul>
-							<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
-							<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-							<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
-							<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-							<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-							<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
-						</ul>
-					</div>
-					<input type="button" value="LEER MAS">
-					
-					<h3>CATEGORIAS</h3>
-
-					<div class="categorias">
-							<i class="fa fa-folder-open-o" aria-hidden="true"></i>
-							<h4>ESTILO DE VIDA</h4><span>5</span>
-					<div>
-
-					<div class="categorias">
-							<i class="fa fa-folder-open-o" aria-hidden="true"></i>
-							<h4>FOTO</h4><span>5</span>
-					<div>
-
-					<div class="categorias">
-							<i class="fa fa-folder-open-o" aria-hidden="true"></i>
-							<h4>VIAJES</h4><span>5</span>
-					<div>
-
-					<div class="categorias">
-							<i class="fa fa-folder-open-o" aria-hidden="true"></i>
-							<h4>MÚSICA</h4><span>5</span>
-					<div>
-
-					<div class="categorias">
-							<i class="fa fa-folder-open-o" aria-hidden="true"></i>
-							<h4>VIDEO</h4><span>5</span>
-					<div>
-
-					<h3>POPULAR</h3>
-
-					<div class="populares">
-							<img src="./img/thumb1.jpg">
-							<h4>POR QUE NO ES EL MEJOR MOMENTO</h4>
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<p class="legendp">MAR 12, 2016</p>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>80</li>
-					<div>
-
-
-					<div class="populares">
-							<img src="./img/thumb2.jpg">
-							<h4>5 IDEAS DE VACACIONES</h4>
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<p class="legendp">MAR 12, 2016</p>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>80</li>
-					<div>
-
-
-					<div class="populares">
-							<img src="./img/thumb3.jpg">
-							<h4>POR QUE NO ES EL MEJOR MOMENTO</h4>
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<p class="legendp">MAR 12, 2016</p>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>80</li>
-					<div>
-
-
-					<div class="populares">
-							<img src="./img/thumb4.jpg">
-							<h4>5 IDEAS DE VACACIONES</h4>
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<p class="legendp">MAR 12, 2016</p>
-							<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
-							<li>80</li>
-					<div>
-
-					<h3>INSTAGRAM</h3>
-
-					<div id="collage">
-						<div id="img6">
-							<img src="./img/blog-img-double1.jpg">
-						</div>
-						<div id="img7">
-							<img src="./img/gallery-img-double1.jpg">
-						</div>
-						<div id="img8">
+					<div class="quien-soy">
+							<h3>QUIEN SOY</h3>
 							<img src="./img/gallery-img-single1.jpg">
+							<p>Dolor sit amet, consectetur adipiscing elit. Curabitur id magna feugiat, molestie arcu eget, interdum nulla. Phasellus ultrices nunc at lectus lacinia, sit amet tristique purus aliquam. </p>
+						
+						<div class="redesconpin">
+							<ul>
+								<li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+								<li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+								<li><i class="fa fa-dribbble" aria-hidden="true"></i></li>
+								<li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+								<li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+								<li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+							</ul>
 						</div>
-						<div id="img9">
-							<img src="./img/gallery-img-single2.jpg">
+						<input type="button" value="LEER MAS">
+					</div>
+
+					<div class="cates">
+						<h3>CATEGORIAS</h3>
+
+						<div class="categorias">
+								<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+								<h4>ESTILO DE VIDA</h4><span>5</span>
 						</div>
-						<div id="img10">
-							<img src="./img/gallery-img-single3.jpg">
+
+						<div class="categorias">
+								<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+								<h4>FOTO</h4><span>20</span>
 						</div>
-						<div id="img11">
-							<img src="./img/gallery-img-single4.jpg">
+
+						<div class="categorias">
+								<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+								<h4>VIAJES</h4><span>18</span>
 						</div>
-						<div id="img12">
-							<img src="./img/gallery-img-single2.jpg">
+
+						<div class="categorias">
+								<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+								<h4>MÚSICA</h4><span>27</span>
 						</div>
-						<div id="img13">
-							<img src="./img/gallery-img-single3.jpg">
+
+						<div class="categorias">
+								<i class="fa fa-folder-open-o" aria-hidden="true"></i>
+								<h4>VIDEO</h4><span>2</span>
 						</div>
-						<div id="img14">
-							<img src="./img/gallery-img-single4.jpg">
+					</div>
+						
+				
+					<div class="popular">
+						<h3>POPULAR</h3>
+
+						<div class="populares">
+
+							<div class="img-p">
+								<img src="./img/thumb1.jpg">
+							</div>
+
+							<div class="detail">
+								<h4>POR QUE NO ES EL MEJOR MOMENTO</h4>
+																
+								<div class="tell">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									MAR 12, 2016
+								</div>
+									
+								<div class="like">
+									<i class="fa fa-heart-o" aria-hidden="true"></i>
+									80
+								</div>								
+							</div>
+						</div>
+
+
+						<div class="populares">
+
+							<div class="img-p">
+								<img src="./img/thumb2.jpg">
+							</div>
+
+							<div class="detail">
+								<h4>5 IDEAS DE VACACIONES</h4>
+								
+								<div class="tell">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									MAR 12, 2016
+								</div>
+
+								<div class="like">
+									<i class="fa fa-heart-o" aria-hidden="true"></i>
+									80
+								</div>
+							</div>
+						</div>
+
+
+					<div class="populares">
+
+							<div class="img-p">
+								<img src="./img/thumb3.jpg">
+							</div>
+
+							<div class="detail">
+								<h4>POR QUE NO ES EL MEJOR MOMENTO</h4>
+								
+								<div class="tell">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									MAR 12, 2016
+								</div>
+
+								<div class="like">
+									<i class="fa fa-heart-o" aria-hidden="true"></i>
+									80
+								</div>
+							</div>
+						</div>
+
+
+						<div class="populares">
+
+							<div class="img-p">
+								<img src="./img/thumb4.jpg">
+							</div>
+
+							<div class="detail">
+								<h4>5 IDEAS DE VACACIONES</h4>
+								
+								<div class="tell">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									MAR 12, 2016
+								</div>
+
+								<div class="like">
+									<i class="fa fa-heart-o" aria-hidden="true"></i>
+									80
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<h3>TAGS</h3>
-						<a href="#">VIDEO</a>
-						<a href="#">ESTILO DE VIDA</a>
-						<a href="#">FOTO</a>
-						<a href="#">VIAJES</a>
-						<a href="#">MINIVIAJES</a>
-						<a href="#">MÚSICA</a>
-						<a href="#">FIZI</a>
-						<a href="#">ASIA</a>
-						<a href="#">CAMINATAS</a>
-						<a href="#">AUDIO</a>
-						
+					<div class="instagram">
+						<h3>INSTAGRAM</h3>
+
+						<div id="collage">
+							<div id="img6" class="insta">
+								<img src="./img/blog-img-1.jpg">
+							</div>
+							<div id="img7" class="insta">
+								<img src="./img/gallery-img-double1.jpg">
+							</div>
+							<div id="img8" class="insta">
+								<img src="./img/gallery-img-single1.jpg">
+							</div>
+							<div id="img9" class="insta">
+								<img src="./img/gallery-img-single2.jpg">
+							</div>
+							<div id="img10" class="insta">
+								<img src="./img/gallery-img-single3.jpg">
+							</div>
+							<div id="img11" class="insta">
+								<img src="./img/gallery-img-single4.jpg">
+							</div>
+							<div id="img12" class="insta">
+								<img src="./img/gallery-img-single2.jpg">
+							</div>
+							<div id="img13" class="insta">
+								<img src="./img/gallery-img-single3.jpg">
+							</div>
+							<div id="img14" class="insta">
+								<img src="./img/gallery-img-single4.jpg">
+							</div>
+						</div>
+					</div>
+
+					<div class="tags">
+						<h3>TAGS</h3>
+							<p><a href="#">VIDEO</a>
+							<a href="#">ESTILO DE VIDA</a></p>
+							<p><a href="#">FOTO</a>
+							<a href="#">VIAJES</a>
+							<a href="#">MINIVIAJES</a></p>
+							<p><a href="#">MÚSICA</a>
+							<a href="#">FIZI</a>
+							<a href="#">ASIA</a></p>
+							<p><a href="#">CAMINATAS</a>
+							<a href="#">AUDIO</a></p>
+					</div>
 				</aside>
 			
 
